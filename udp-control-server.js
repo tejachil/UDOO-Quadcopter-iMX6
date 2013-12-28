@@ -1,3 +1,4 @@
+var CLIENT_HOST = '127.0.0.1';
 var SERVER_PORT = 33333;
 var CLIENT_PORT = 33334;
 
