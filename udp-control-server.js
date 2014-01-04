@@ -24,9 +24,11 @@ server.on('message', function (message, remote) {
 		console.log("AHRS Command: " + message);
 		serialPort.write(message);
 	}
-	else
-	console.log(remote.address + ':' + remote.port +' - ' + message);
-	server.send(message, 0, message.length, CLIENT_CONTROL_PORT, remote.address); // echos message
+	else{
+		console.log(remote.address + ':' + remote.port +' - ' + message);
+	}
+	//server.send(message, 0, message.length, CLIENT_CONTROL_PORT, remote.address); // echos message
+	serialPort.write(message);
 });
 
 serialPort.open(function () {
