@@ -9,7 +9,7 @@ var server = dgram.createSocket('udp4');
 
 var com = require("serialport")
 var serialPort = new com.SerialPort(SERIAL_PORT, {
-  baudrate: 57600,
+  baudrate: 115200,
   parser: com.parsers.readline('\n')
 }, false);
 
